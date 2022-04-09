@@ -138,7 +138,8 @@ public class SmartconfigSwjavaModule extends ReactContextBaseJavaModule {
                 mEsptouchTask.setEsptouchListener(result -> {
                     String ip = result.getInetAddress().getHostAddress();
                     String bssid = result.getBssid();
-                    String data = "{\"ip\":\"" + ip + "\", \"bssid\":\"" + bssid + "\"}";
+                    // String data = "{\"ip\":\"" + ip + "\", \"bssid\":\"" + bssid + "\"}";
+                    String data = ip;
                     onFoundDevice(data);
                 });
             }
